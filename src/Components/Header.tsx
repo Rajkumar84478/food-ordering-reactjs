@@ -1,7 +1,7 @@
-// import React from 'react'
-import { useState } from 'react';
-import logo from '/Users/rajkumar.chauhan/Vscode/Practice/practive/reactPractice/app/src/images/logo.png'
 
+import { useState } from 'react';
+import logo from '../images/logo.png';
+import {Link} from 'react-router-dom';
 export default function Header() {
   
   const [btnName,setBtnName]=useState("Login");
@@ -16,9 +16,9 @@ export default function Header() {
         </div>
         <div className="nav-items">
         <ul>
-          <li>Home</li>
-          <li>About Us</li>
-          <li>Constact Us</li>
+          <li> <Link to="/" > Home</Link> </li>
+          <li><Link to='/about'>About Us</Link></li>
+          <li> <Link to='/contact'> Contact Us</Link></li>
           <li>Cart</li>
           <button onClick={()=>{
             setBtnName(btnName==='Login'?'Logout':'Login');
